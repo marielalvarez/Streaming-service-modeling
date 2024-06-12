@@ -1,0 +1,10 @@
+20192345,Ad Astra,02:03,Drama,6.6
+20190750,The Platform,01:34,Drama,7
+20191580,Star Wars: The Rise of Skywalker,02:22,Acción,6.7
+20191245,The Lion King,01:58,Drama,6.9
+20200341,Onward,01:42,Acción,7.5
+20200450,Extraction,01:56,Drama,6.8
+20171580,Beauty and the Beast,02:09,Acción,7.1
+19960728,Matilda,2:03,Comedia,7
+20031128,Kill Bill,1:52,Acción,8.2
+20050106,Hostel,1:33,Terror,6
