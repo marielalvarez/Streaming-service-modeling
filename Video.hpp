@@ -24,6 +24,7 @@ public:
 //Methods
     Video();
     Video(int ID, string title, int duration, string genre, double rating);
+    Video(int, int, double); //Constructor for episodes
     //Virtual pure method
     void setID(int ID);
     void setTitle(string title);
@@ -32,10 +33,10 @@ public:
     void setRating(doube rating);
 
     int getID();
-    string gettitle();
-    int getduration();
-    string getgenre();
-    int getrating();
+    string getTitle();
+    int getDuration();
+    string getGenre();
+    int getRating();
 
     virtual void showData()=0;
     
