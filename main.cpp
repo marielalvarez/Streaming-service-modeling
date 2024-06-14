@@ -53,6 +53,10 @@ void showEpRating(vector<Series*>& nameSeries, const string& title, double ratin
     }
 }
 
+void showVideoByRating(vector<Video*>& listVideos, string videoTitle, double urating)
+
+
+
 int main() {
     vector<Video> videos;
     vector<Series*> nameSeries;
@@ -73,9 +77,7 @@ int main() {
         cout << "3. Show the episodes of a specific series with a specific rating." << endl;
         cout << "4. Show the movies with a specific rating." << endl;
         cout << "5. Rate a video." << endl;
-        cout << "6. Ask for the title to rate." << endl;
-        cout << "7. Ask for the rating." << endl;
-        cout << "8. Exit" << endl;
+        cout << "6. Exit" << endl;
         cin >> option;
 
         switch (option) {
@@ -115,11 +117,13 @@ int main() {
                 break;
             }
             case 6: {
-                string videoTitle;
-                double rating;
+                string uvideoTitle;
+                double urating;
                 cout << "Enter video title: ";
-                
-                cout << "Enter the rating you give to this title";
+                cin >> uvideoTitle;
+                cout << "Enter the rating you give to this title: ";
+                cin >> urating;
+                showVideoByRating(uvideoTitle, urating);
                 break;
             }
             case 7: {
