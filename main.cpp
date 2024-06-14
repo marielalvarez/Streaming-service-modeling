@@ -101,7 +101,10 @@ int main() {
                 break;
             }
             case 4: {
-                // Implementar funcionalidad para mostrar películas por calificación
+                double rating;
+                cout << "Enter rating: ";
+                cin >> rating;
+                showMoviesByRating(movies, rating);
                 break;
             }
             case 5: {
