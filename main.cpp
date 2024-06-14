@@ -16,8 +16,7 @@
 
 
 using namespace std;
-
-void cargarDatos(vector<Video*>& videos, vector<Series*>& series) {
+void loadData(vector<Video*>& videos, vector<Series*>& nameSeries) {
     
     string seriesFile = "series.txt";
     string moviesFile = "movies.txt";
@@ -36,7 +35,7 @@ void cargarDatos(vector<Video*>& videos, vector<Series*>& series) {
         while (getline(archivoSeries, readline)) {
             stringstream ss(readline);
             ss >> id >> titleS >> temps;
-            series.push_back(new Series(id, titleS, temps)); // se crea un nuevo objeto de tipo Serie y
+            nameSeries.push_back(new Series(id, titleS, temps)); // se crea un nuevo objeto de tipo Serie y
             // se agrega a un vector de apuntadores
         }
         archivoSeries.close();
@@ -79,7 +78,6 @@ void cargarDatos(vector<Video*>& videos, vector<Series*>& series) {
     }
 }
 
-
 void showEpRating(vector<Series*>& nameSeries, const string& title, double rating) {
     cout << "Episodios de la Serie " << title << " con Calificación " << rating << ":" << endl;
     for (Series* name : nameSeries) {
@@ -89,32 +87,27 @@ void showEpRating(vector<Series*>& nameSeries, const string& title, double ratin
     }
 }
 
-void showVideoByRating(vector<Video*>& listVideos, string videoTitle, double urating)
-
-
-
 int main() {
-    vector<Video> videos;
+    vector<Video*> videos;
     vector<Series*> nameSeries;
+
 
     // Ciclo de opciones del menú
     int option;
     do {
-        cout << "1. Load data file." << endl;
+        cout << "1.  Load data file." << endl;
         cout << "2. Show the videos with a specific rating or from a specific genre." << endl;
         cout << "3. Show the episodes of a specific series with a specific rating." << endl;
         cout << "4. Show the movies with a specific rating." << endl;
         cout << "5. Rate a video." << endl;
-        cout << "6. Exit" << endl;
+        cout << "6. Ask for the title to rate." << endl;
+        cout << "7. Ask for the rating." << endl;
+        cout << "8. Exit" << endl;
         cin >> option;
 
         switch (option) {
             case 1: {
-                cout << "Enter the filename to load: ";
-                string filename;
-                cin >> filename;
-                loadMoviesFromFile(filename, videos);
-                break;
+                loadData(videos, nameSeries);
             }
             case 2: {
                 // Implementar funcionalidad para mostrar videos por calificación o género
@@ -131,28 +124,22 @@ int main() {
                 break;
             }
             case 4: {
-                double rating;
-                cout << "Enter rating: ";
-                cin >> rating;
-                showMoviesByRating(movies, rating);
+                // Implementar funcionalidad para mostrar películas por calificación
                 break;
             }
             case 5: {
-                double rating;
-                cout << "Enter rating: ";
-                cin >> rating;
-                showVideoByRating(video, rating)
-                    
-                string uvideoTitle;
-                double urating;
-                cout << "Enter video title: ";
-                cin >> uvideoTitle;
-                cout << "Enter the rating you give to this title: ";
-                cin >> urating;
-                showVideoByRating(uvideoTitle, urating);
+                // Implementar funcionalidad para calificar un video
                 break;
             }
             case 6: {
+                // Implementar funcionalidad para preguntar por el título para calificar
+                break;
+            }
+            case 7: {
+                // Implementar funcionalidad para preguntar por la calificación
+                break;
+            }
+            case 8: {
                 cout << "Exiting." << endl;
                 break;
             }
@@ -162,7 +149,8 @@ int main() {
             }
         }
         cout << endl;
-    } while (option != 6);
+    } while (option != 8);
+    
 
     return 0;
 }
