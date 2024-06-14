@@ -1,10 +1,10 @@
-20192345,Ad Astra,02:03,Drama,6.6
-20190750,The Platform,01:34,Drama,7
-20191580,Star Wars: The Rise of Skywalker,02:22,Acción,6.7
-20191245,The Lion King,01:58,Drama,6.9
-20200341,Onward,01:42,Acción,7.5
-20200450,Extraction,01:56,Drama,6.8
-20171580,Beauty and the Beast,02:09,Acción,7.1
-19960728,Matilda,2:03,Comedia,7
-20031128,Kill Bill,1:52,Acción,8.2
-20050106,Hostel,1:33,Terror,6
+20192345 Ad_Astra 7380 Drama 6.6
+20190750 The_Platform 5640 Drama 7
+20191580 Star_Wars:_The_Rise_of_Skywalker 8520 Acción 6.7
+20191245 The_Lion_King 7080 Drama 6.9
+20200341 Onward 6120 Acción 7.5
+20200450 Extraction 6960 Drama 6.8
+20171580 Beauty_and_the_Beast 7740 Acción 7.1
+19960728 Matilda 7380 Comedia 7
+20031128 Kill_Bill 6720 Acción 8.2
+20050106 Hostel 5580 Terror 6
