@@ -17,32 +17,68 @@
 
 using namespace std;
 
-void loadMoviesFromFile(const string& filename, vector<Video>& videos) {
-    ifstream file(filename);
-    if (!file.is_open()) {
-        cerr << "Unable to open file: " << filename << endl;
-        return;
+void cargarDatos(vector<Video*>& videos, vector<Series*>& series) {
+    
+    string seriesFile = "series.txt";
+    string moviesFile = "movies.txt";
+    string episodosFile = "episodes.txt";
+    ifstream archivoSeries(seriesFile);
+    ifstream archivoMovies(moviesFile);
+    ifstream archivoEpisodes(episodosFile);
+    
+    if (archivoSeries.is_open()) {
+        string readline;
+        
+        int id;
+        string titleS;
+        int temps;
+        
+        while (getline(archivoSeries, readline)) {
+            stringstream ss(readline);
+            ss >> id >> titleS >> temps;
+            series.push_back(new Series(id, titleS, temps)); // se crea un nuevo objeto de tipo Serie y
+            // se agrega a un vector de apuntadores
+        }
+        archivoSeries.close();
+        cout << "Series data loaded correctly" << endl;
     }
-
-    string line;
-    while (getline(file, line)) {
-        stringstream ss(line);
-        int id, duration;
-        string title, genre;
-        double rating;
-        ss >> id;
-        getline(ss, title, ',');
-        getline(ss, genre, ',');
-        ss >> duration;
-        ss >> rating;
-
-        // Crear un objeto Video y agregarlo al vector
-        vector <Movies*> mov;
-        mov.push_back(new Movies(id, title, duration, genre, rating));
+    if (archivoMovies.is_open()) {
+        string readlin;
+        
+        int Id;
+        string titleM;
+        int duracion;
+        string genero;
+        double calif;
+        
+        while (getline(archivoSeries, readlin)) {
+            stringstream ss(readlin);
+            ss >> Id >> titleM >> duracion >> genero >> calif;
+            videos.push_back(new Movies(Id, titleM, duracion, genero, calif));
+        }
+        archivoSeries.close();
+        cout << "Movies data loaded correctly" << endl;
     }
-
-    file.close();
+    if (archivoEpisodes.is_open()) {
+        string readli;
+        
+        int iD;
+        string idserie;
+        string nameE;
+        int dur;
+        double cali;
+        string temp;
+        
+        while (getline(archivoSeries, readli)) {
+            stringstream ss(readli);
+            ss >> iD >> idserie >> nameE >> dur >> cali >> temp;
+            videos.push_back(new Episodes(iD, idserie, nameE, dur, cali, temp));
+        }
+        archivoSeries.close();
+        cout << "Episodes data loaded correctly" << endl;
+    }
 }
+
 
 void showEpRating(vector<Series*>& nameSeries, const string& title, double rating) {
     cout << "Episodios de la Serie " << title << " con Calificación " << rating << ":" << endl;
@@ -60,14 +96,6 @@ void showVideoByRating(vector<Video*>& listVideos, string videoTitle, double ura
 int main() {
     vector<Video> videos;
     vector<Series*> nameSeries;
-
-    // Cargar datos iniciales desde el archivo
-    loadMoviesFromFile("movies.txt", videos);
-
-    // Mostrar los videos cargados para verificar
-    for (auto& video : videos) {
-        cout << "Video loaded: " << video.getTitle() << endl;
-    }
 
     // Ciclo de opciones del menú
     int option;
