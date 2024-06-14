@@ -31,7 +31,7 @@ public:
     void setTitle(string title);
     void setDuration(int duration);
     void setGenre(string genre);
-    void setRating(doube rating);
+    void setRating(double rating);
 
     int getID();
     string getTitle();
