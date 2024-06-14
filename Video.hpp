@@ -25,10 +25,28 @@ public:
     Video();
     Video(int, string, int, string, double);
     //Virtual pure method
+    void setID(int ID);
+    void setTitle(string title);
+    void setDuration(int duration);
+    void setGenre(string genre);
+    void setRating(doube rating);
+
+    int getID();
+    string gettitle();
+    int getduration();
+    string getgenre();
+    int getrating();
+
     virtual void showData()=0;
     
 };
 
+Video::Video() {
+    ID = 0;
+    title = "-";
+    duration = 0;
+    genre = "-";
+    rating = 0;
 
 
 
