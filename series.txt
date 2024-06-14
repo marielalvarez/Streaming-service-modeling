@@ -1,10 +1,10 @@
-20110125,Game of Thrones,Drama,8
-20170120,Dark,Misterio,2
-20160150,Stranger Things,Accion,3
-20170220,La casa de papel,Drama,4
-20181012,The Haunting of Hill House,Terror,1
-20190510,The Society,Suspenso,1
-20210108,Lupin,Drama,3
-20230604,The Idol,Drama,1
-20190616,Euphoria,Drama,2
-20220422,Heartstopper,Romance,2 
+20110125 Game of Thrones Drama 8
+20170120 Dark Misterio 2
+20160150 Stranger Things Accion 3
+20170220 La casa de papel Drama 4
+20181012 The Haunting of Hill House Terror 1
+20190510 The Society Suspenso 1
+20210108 Lupin Drama 3
+20230604 The Idol Drama 1
+20190616 Euphoria Drama 2
+20220422 Heartstopper Romance 2 
