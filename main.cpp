@@ -142,9 +142,7 @@ int main() {
                 cout << "Enter rating: ";
                 cin >> rating;
                 showVideoByRating(video, rating)
-                break;
-            }
-            case 6: {
+                    
                 string uvideoTitle;
                 double urating;
                 cout << "Enter video title: ";
@@ -154,11 +152,7 @@ int main() {
                 showVideoByRating(uvideoTitle, urating);
                 break;
             }
-            case 7: {
-                // Implementar funcionalidad para preguntar por la calificación
-                break;
-            }
-            case 8: {
+            case 6: {
                 cout << "Exiting." << endl;
                 break;
             }
@@ -168,7 +162,7 @@ int main() {
             }
         }
         cout << endl;
-    } while (option != 8);
+    } while (option != 6);
 
     return 0;
 }
