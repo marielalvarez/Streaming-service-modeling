@@ -124,22 +124,28 @@ int main() {
                 break;
             }
             case 4: {
-                // Implementar funcionalidad para mostrar películas por calificación
+                double rating;
+                cout << "Enter rating: ";
+                cin >> rating;
+                showMoviesByRating(movies, rating);
                 break;
             }
             case 5: {
-                // Implementar funcionalidad para calificar un video
+                double rating;
+                cout << "Enter rating: ";
+                cin >> rating;
+                showVideoByRating(video, rating)
+                    
+                string uvideoTitle;
+                double urating;
+                cout << "Enter video title: ";
+                cin >> uvideoTitle;
+                cout << "Enter the rating you give to this title: ";
+                cin >> urating;
+                showVideoByRating(uvideoTitle, urating);
                 break;
             }
             case 6: {
-                // Implementar funcionalidad para preguntar por el título para calificar
-                break;
-            }
-            case 7: {
-                // Implementar funcionalidad para preguntar por la calificación
-                break;
-            }
-            case 8: {
                 cout << "Exiting." << endl;
                 break;
             }
@@ -149,8 +155,7 @@ int main() {
             }
         }
         cout << endl;
-    } while (option != 8);
-    
+    } while (option != 6);
 
     return 0;
 }
