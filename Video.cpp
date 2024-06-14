@@ -24,3 +24,27 @@ Video::Video(int ID, string title, int duration, string genre, double rating){
     this->rating = rating;
 }
 //Setters & Getters
+
+void Video::setID(int ID) { this->ID = ID; }
+
+void Video::setTitle(string title) { this->title = title; }
+
+void Video::setDuration(int duration) { this->duration = duration; }
+
+void Video::setGenre(string genre) { this->genre = genre; }
+
+void Video::setRating(int rating) {this->rating = rating; }
+
+// Getters
+
+int Video::getID() { return ID; }
+
+string Video::getTitle() { return title; }
+
+int Video::getDuration() { return duration; }
+
+string Video::getGenre() { return genre; }
+
+int Video::getRating() { return rating; }
+
+#endif
