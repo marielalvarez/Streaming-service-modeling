@@ -16,7 +16,7 @@ Episodes::Episodes() : Video() {
     season= "-";
 }
 
-Episodes::Episodes(int ID, string title,int duration, string genre, double rating, string nameSeries, string numEpisode, string season):Video(ID, title, duration, genre, rating){
+Episodes::Episodes(int ID,int duration, double rating, string nameSeries, string numEpisode, string season):Video(ID, duration, rating){
     this->nameSeries = nameSeries;
     this->numEpisode = numEpisode;
     this->season = season;
