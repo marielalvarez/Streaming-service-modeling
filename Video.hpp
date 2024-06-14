@@ -23,7 +23,7 @@ protected:
 public:
 //Methods
     Video();
-    Video(int, string, int, string, double);
+    Video(int ID, string title, int duration, string genre, double rating);
     //Virtual pure method
     void setID(int ID);
     void setTitle(string title);
