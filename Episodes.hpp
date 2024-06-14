@@ -20,7 +20,7 @@ private:
 public:
     //Constructors
     Episodes();
-    Episodes(int, int, double, string, string, string);
+    Episodes(int, string, string, int, double, string);
     
     //Setters
     void setNameSeries(string);
