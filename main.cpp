@@ -23,7 +23,7 @@ void loadData(vector<Video*>& videos, vector<Series*>& nameSeries) {
     string episodosFile = "episodes.txt";
     ifstream archivoSeries(seriesFile);
     ifstream archivoMovies(moviesFile);
-    ifstream archivoEpisodes(episodosFile);
+    ifstream archivoEpisodes(episodesFile);
     
     if (archivoSeries.is_open()) {
         string readline;
@@ -90,10 +90,10 @@ void showEpRating(vector<Series*>& nameSeries, const string& title, double ratin
 void showMoviesByRating(vector<Video*>& videos,
     double rating) {
     cout << "Movies with ratings " << rating << ":" << endl;
-    for (Movies* movies : listaVideos) {
-        Pelicula* pelicula = dynamic_cast<Pelicula*>(video);
-        if (pelicula != nullptr && pelicula->getCalificacion() == calificacion) {
-            pelicula->imprimirInfo();
+    for (Movies* movies : movies) {
+        Movies* movies = dynamic_cast<Movies*>(movies);
+        if (movie != nullptr && movie->getrating() == rating) {
+            movies->showData();
         }
     }
 }
