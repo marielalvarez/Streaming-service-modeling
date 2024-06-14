@@ -87,6 +87,17 @@ void showEpRating(vector<Series*>& nameSeries, const string& title, double ratin
     }
 }
 
+void showMoviesByRating(vector<Video*>& videos,
+    double rating) {
+    cout << "Movies with ratings " << rating << ":" << endl;
+    for (Movies* movies : listaVideos) {
+        Pelicula* pelicula = dynamic_cast<Pelicula*>(video);
+        if (pelicula != nullptr && pelicula->getCalificacion() == calificacion) {
+            pelicula->imprimirInfo();
+        }
+    }
+}
+
 int main() {
     vector<Video*> videos;
     vector<Series*> nameSeries;
