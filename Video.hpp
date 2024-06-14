@@ -41,12 +41,6 @@ public:
     
 };
 
-Video::Video() {
-    ID = 0;
-    title = "-";
-    duration = 0;
-    genre = "-";
-    rating = 0;
 
 
 
