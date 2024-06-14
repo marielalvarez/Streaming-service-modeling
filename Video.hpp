@@ -22,6 +22,7 @@ protected:
     double rating;
 public:
 //Methods
+    virtual ~Video() {}
     Video();
     Video(int ID, string title, int duration, string genre, double rating);
     Video(int, int, double); //Constructor for episodes
