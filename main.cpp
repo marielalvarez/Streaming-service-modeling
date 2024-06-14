@@ -68,7 +68,7 @@ int main() {
     // Ciclo de opciones del menú
     int option;
     do {
-        cout << "1.  Load data file." << endl;
+        cout << "1. Load data file." << endl;
         cout << "2. Show the videos with a specific rating or from a specific genre." << endl;
         cout << "3. Show the episodes of a specific series with a specific rating." << endl;
         cout << "4. Show the movies with a specific rating." << endl;
@@ -108,11 +108,18 @@ int main() {
                 break;
             }
             case 5: {
-                // Implementar funcionalidad para calificar un video
+                double rating;
+                cout << "Enter rating: ";
+                cin >> rating;
+                showVideoByRating(video, rating)
                 break;
             }
             case 6: {
-                // Implementar funcionalidad para preguntar por el título para calificar
+                string videoTitle;
+                double rating;
+                cout << "Enter video title: ";
+                
+                cout << "Enter the rating you give to this title";
                 break;
             }
             case 7: {
