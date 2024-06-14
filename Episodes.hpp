@@ -5,7 +5,6 @@
 //  Mariel Alvarez Salas
 //  Samira Hazim Rodriguez
 //
-
 #ifndef Episodes_hpp
 #define Episodes_hpp
 #include "Video.hpp"
@@ -21,7 +20,7 @@ private:
 public:
     //Constructors
     Episodes();
-    Episodes(int, string, int, string, double, string, string, string);
+    Episodes(int, int, double, string, string, string);
     
     //Setters
     void setNameSeries(string);
