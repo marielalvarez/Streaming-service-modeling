@@ -78,6 +78,16 @@ void loadData(vector<Video*>& videos, vector<Series*>& nameSeries) {
     }
 }
 
+void showVideosbyratingandgenre(vector<Video*>& videos, int rating, string genre) {
+    cout << "Videos with ratings " << rating << " and genres " << genre << ":" << endl;
+    for (Video* video : videos) {
+        if (video->getrating() == rating &&
+            video->getgenre() == genre) {video->showData();
+        }
+    }
+}
+
+
 void showEpRating(vector<Series*>& nameSeries, const string& title, double rating) {
     cout << "Episodios de la Serie " << title << " con Calificación " << rating << ":" << endl;
     for (Series* name : nameSeries) {
@@ -96,6 +106,17 @@ void showMoviesByRating(vector<Video*>& videos,
             movies->showData();
         }
     }
+}
+
+void ratevideo(vector<Video*>& videos, string title, int value) {
+    for (Video* video : videos) {
+        if (video->getTitle() == titulo) {
+            video->setRating(value);
+            cout << "The video: \"" << titulo << "\" has been rate with value " << value << endl;
+            return;
+        }
+    }
+    cout << "We couldn't find the video you inserted \"" << title << "\"" << endl;
 }
 
 int main() {
@@ -121,7 +142,13 @@ int main() {
                 loadData(videos, nameSeries);
             }
             case 2: {
-                // Implementar funcionalidad para mostrar videos por calificación o género
+                int rating;
+                string genre;
+                cout << "Insert rating: ";
+                cin >> rating;
+                cout << "Insert genre: ";
+                cin >> genre;
+                showVideosbyratingandgenre(videos, rating, genre);
                 break;
             }
             case 3: {
@@ -142,18 +169,13 @@ int main() {
                 break;
             }
             case 5: {
-                double rating;
-                cout << "Enter rating: ";
-                cin >> rating;
-                showVideoByRating(video, rating)
-                    
-                string uvideoTitle;
-                double urating;
-                cout << "Enter video title: ";
-                cin >> uvideoTitle;
-                cout << "Enter the rating you give to this title: ";
-                cin >> urating;
-                showVideoByRating(uvideoTitle, urating);
+                string title;
+                int rate;
+                cout << "Insert what title you want to rate: ";
+                cin >> title;
+                cout << "Insert the rating: ";
+                cin >> value;
+                ratevideo(videos, title, value);
                 break;
             }
             case 6: {
