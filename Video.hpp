@@ -5,47 +5,33 @@
 //  Mariel Alvarez Salas
 //  Samira Hazim Rodriguez
 //
+#ifndef VIDEO_HPP
+#define VIDEO_HPP
 
-#ifndef Video_hpp
-#define Video_hpp
 #include <string>
-#include <stdio.h>
 
-using namespace std;
-class Video{
+class Video {
 protected:
-//Protected atributes
-    int ID;
-    string title;
+    int id;
+    std::string title;
     int duration;
-    string genre;
+    std::string genre;
     double rating;
+
 public:
-//Methods
+    Video(int id, std::string title, int duration, std::string genre, double rating);
     virtual ~Video() {}
-    Video();
-    Video(int ID, string title, int duration, string genre, double rating);
-    Video(int, int, double); //Constructor for episodes
-    //Virtual pure method
-    void setID(int ID);
-    void setTitle(string title);
-    void setDuration(int duration);
-    void setGenre(string genre);
+
+    int getId() const;
+    std::string getTitle() const;
+    int getDuration() const;
+    std::string getGenre() const;
+    double getRating() const;
+
     void setRating(double rating);
 
-    int getID();
-    string getTitle();
-    int getDuration();
-    string getGenre();
-    int getRating();
-
-    virtual void showData()=0;
-    
+    virtual void showData() const = 0;
 };
 
+#endif
 
-
-
-
-
-#endif /* Video_hpp */
