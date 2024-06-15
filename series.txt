@@ -1,8 +1,8 @@
 20110125 Game_of_Thrones Drama 8
-20170120 Dark_Misterio 2
+20170120 Dark Misterio 2
 20160150 Stranger_Things Accion 3
 20170220 La_casa_de_papel Drama 4
-20181012 The_Haunting_of_Hill_House Terror 1
+20181012 The_Haunting_of_Hill_House Misterio 1
 20190510 The_Society Suspenso 1
 20210108 Lupin Drama 3
 20230604 The_Idol Drama 1
