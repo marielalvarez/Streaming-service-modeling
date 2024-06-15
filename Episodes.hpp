@@ -5,35 +5,19 @@
 //  Mariel Alvarez Salas
 //  Samira Hazim Rodriguez
 //
-#ifndef Episodes_hpp
-#define Episodes_hpp
+#ifndef EPISODES_HPP
+#define EPISODES_HPP
+
 #include "Video.hpp"
 
-#include <stdio.h>
-#include <string>
-using namespace std;
-
-class Episodes : public Video{
+class Episodes : public Video {
 private:
-    //Atributes
-    string nameSeries, numEpisode, season;
+    std::string seriesId;
+    std::string season;
+
 public:
-    //Constructors
-    Episodes();
-    Episodes(int, string, string, int, double, string);
-    
-    //Setters
-    void setNameSeries(string);
-    void setRating(double);
-    void setSeason(string);
-    
-    //Getters
-    string getNameSeries();
-    double getRating();
-    string getSeasons();
-    
-    //Inherited method
-    void showData();
+    Episodes(int id, std::string seriesId, std::string title, int duration, double rating, std::string season);
+    void showData() const override;
 };
 
-#endif /* Episodes_hpp */
+#endif
