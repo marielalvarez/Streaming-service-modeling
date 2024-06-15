@@ -5,46 +5,27 @@
 //  Mariel Alvarez Salas
 //  Samira Hazim Rodriguez
 //
+#ifndef SERIES_HPP
+#define SERIES_HPP
 
-#ifndef Series_hpp
-#define Series_hpp
-#include "Episodes.hpp"
+#include "Video.hpp"
 #include <vector>
-#include <stdio.h>
-using namespace std;
+#include <string>
+#include "Episodes.hpp"
 
-class Series{
+class Series : public Video {
 private:
-    //Atributes
-    int ID;
-    string title;
-    vector<Episodes*> episode;
     int seasons;
+    std::vector<Episodes*> episodes;
 
 public:
-    //Constructors
-    Series();
-    Series(int, string, int);
-    Series(int, string, vector<Episodes*>, int);
-    
-    //Setters
-    void setID(int);
-    void setTitle(string);
-    void setEpisode(vector<Episodes*>);
-    void setSeason(int);
-    
-    //Getters
-    int getID();
-    string getTitle();
-    vector<Episodes*> getEpisode();
-    int getSeason();
-    
-    //Methods
-    void showSeriesData();
-    void showEpisodes();
-    void showEpisodesWRating(double);
-    
-    //addEpisodio?
-    
+    Series(int id, std::string title, int seasons);
+    ~Series();
+
+    int getSeasons() const;
+    void addEpisode(Episodes* episode);
+    void showData() const override;
+    void showEpisodesWRating(double rating) const;
 };
-#endif /* Series_hpp */
+
+#endif
