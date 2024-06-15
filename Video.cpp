@@ -5,43 +5,32 @@
 //  Mariel Alvarez Salas
 //  Samira Hazim Rodriguez
 //
-
 #include "Video.hpp"
-//Constructors
-Video::Video(){
-    ID = 0;
-    title = "0";
-    duration = 0;
-    genre = "0";
-    rating = 0.0;
+#include <iostream>
+
+Video::Video(int id, std::string title, int duration, std::string genre, double rating)
+    : id(id), title(title), duration(duration), genre(genre), rating(rating) {}
+
+int Video::getId() const {
+    return id;
 }
 
-Video::Video(int ID, string title, int duration, string genre, double rating){
-    this->ID = ID;
-    this->title = title;
-    this->duration = duration;
-    this->genre = genre;
+std::string Video::getTitle() const {
+    return title;
+}
+
+int Video::getDuration() const {
+    return duration;
+}
+
+std::string Video::getGenre() const {
+    return genre;
+}
+
+double Video::getRating() const {
+    return rating;
+}
+
+void Video::setRating(double rating) {
     this->rating = rating;
 }
-Video::Video(int ID, int duration, double rating){
-    this->ID = ID;
-    this->duration = duration;
-    this->rating = rating;
-}
-//Setters & Getters
-
-void Video::setID(int ID) { this->ID = ID; }
-void Video::setTitle(string title) { this->title = title; }
-void Video::setDuration(int duration) { this->duration = duration; }
-void Video::setGenre(string genre) { this->genre = genre; }
-void Video::setRating(int rating) {this->rating = rating; }
-
-// Getters
-
-int Video::getID() { return ID; }
-string Video::getTitle() { return title; }
-int Video::getDuration() { return duration; }
-string Video::getGenre() { return genre; }
-int Video::getRating() { return rating; }
-
-#endif
