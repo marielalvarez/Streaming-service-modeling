@@ -71,7 +71,7 @@ void loadData(vector<Video*>& videos, vector<Series*>& nameSeries) {
             ss >> iD >> idserie >> nameE >> dur >> cali >> temp;
             Episodes* episode = new Episodes(iD, idserie, nameE, dur, cali, temp);
 
-            // Find the corresponding series and add the episode
+            
             for (Series* series : nameSeries) {
                 if (series->getId() == stoi(idserie)) {
                     series->addEpisode(episode);
@@ -93,7 +93,6 @@ void showVideosbyratingandgenre(vector<Video*>& videos, double rating, string ge
             video->showData();
         }
     }
-    cout << "We couldn't find a video that has the specifications inserted" << endl;
 }
 
 void showEpRating(vector<Series*>& nameSeries, const string& title, double rating) {
