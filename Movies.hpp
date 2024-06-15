@@ -2,7 +2,8 @@
 //  Movies.hpp
 //  Streaming_service_modeling
 //
-//  Created by Mariel Alvarez Salas on 13/06/24.
+//  Mariel Alvarez Salas
+//  Samira Hazim 
 //
 #ifndef MOVIES_HPP
 #define MOVIES_HPP
